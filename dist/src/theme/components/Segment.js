@@ -32,7 +32,8 @@ borderLeftWidth:1},
 
 ".last":{
 borderTopRightRadius:platform==="ios"?5:undefined,
-borderBottomRightRadius:platform==="ios"?5:undefined},
+borderBottomRightRadius:platform==="ios"?5:undefined,
+borderRightWidth:1},
 
 "NativeBase.Text":{
 color:variables.segmentTextColor,

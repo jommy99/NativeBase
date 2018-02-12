@@ -1,4 +1,4 @@
-Object.defineProperty(exports,"__esModule",{value:true});exports.Button=undefined;var _jsxFileName="src/basic/Button.js";var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=require("react");var _react2=_interopRequireDefault(_react);
+Object.defineProperty(exports,"__esModule",{value:true});exports.Button=undefined;var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _jsxFileName="src/basic/Button.js";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=require("react");var _react2=_interopRequireDefault(_react);
 var _propTypes=require("prop-types");var _propTypes2=_interopRequireDefault(_propTypes);
 var _reactNative=require("react-native");
 var _nativeBaseShoutemTheme=require("native-base-shoutem-theme");
@@ -34,27 +34,24 @@ return(0,_computeProps2.default)(this.props,defaultProps);
 }},{key:"render",value:function render()
 {var _this2=this;
 var variables=this.context.theme?this.context.theme["@@shoutem.theme/themeStyle"].variables:_platform2.default;
-var children=
-_reactNative.Platform.OS==="ios"?
-this.props.children:
-_react2.default.Children.map(
+if(_reactNative.Platform.OS!=="android"||variables.androidRipple===false||_reactNative.Platform["Version"]<=21){
+return(
+_react2.default.createElement(_reactNative.TouchableOpacity,_extends({},
+this.prepareRootProps(),{
+ref:function ref(c){return _this2._root=c;},
+activeOpacity:this.props.activeOpacity>0?this.props.activeOpacity:0.5,__source:{fileName:_jsxFileName,lineNumber:39}}),
+
+this.props.children));
+
+
+}else{
+var children=_react2.default.Children.map(
 this.props.children,
 function(child){return(
 child&&child.type===_Text.Text?
 _react2.default.cloneElement(child,_extends({uppercase:variables.btnUppercaseAndroidText},child.props)):
 child);});
 
-if(_reactNative.Platform.OS==="ios"||variables.androidRipple===false||_reactNative.Platform["Version"]<=21){
-return(
-_react2.default.createElement(_reactNative.TouchableOpacity,_extends({},
-this.prepareRootProps(),{
-ref:function ref(c){return _this2._root=c;},
-activeOpacity:this.props.activeOpacity>0?this.props.activeOpacity:0.5,__source:{fileName:_jsxFileName,lineNumber:49}}),
-
-children));
-
-
-}else{
 return(
 _react2.default.createElement(_reactNative.TouchableNativeFeedback,_extends({
 ref:function ref(c){return _this2._root=c;},
@@ -64,9 +61,9 @@ this.props.androidRippleColor?
 _reactNative.TouchableNativeFeedback.Ripple(this.props.androidRippleColor):
 _reactNative.TouchableNativeFeedback.Ripple(variables.androidRippleColor)},
 
-this.prepareRootProps(),{__source:{fileName:_jsxFileName,lineNumber:59}}),
+this.prepareRootProps(),{__source:{fileName:_jsxFileName,lineNumber:56}}),
 
-_react2.default.createElement(_reactNative.View,_extends({},this.prepareRootProps(),{__source:{fileName:_jsxFileName,lineNumber:69}}),
+_react2.default.createElement(_reactNative.View,_extends({},this.prepareRootProps(),{__source:{fileName:_jsxFileName,lineNumber:66}}),
 children)));
 
 

@@ -34,16 +34,6 @@ class Button extends Component {
 	}
 	render() {
 		const variables = this.context.theme ? this.context.theme["@@shoutem.theme/themeStyle"].variables : variable;
-		const children =
-			Platform.OS === "ios"
-				? this.props.children
-				: React.Children.map(
-						this.props.children,
-						child =>
-							child && child.type === Text
-								? React.cloneElement(child, { uppercase: variables.btnUppercaseAndroidText, ...child.props })
-								: child
-					);
 		if (Platform.OS !== "android" || variables.androidRipple === false || Platform["Version"] <= 21) {
 			return (
 				<TouchableOpacity
@@ -51,10 +41,17 @@ class Button extends Component {
 					ref={c => (this._root = c)}
 					activeOpacity={this.props.activeOpacity > 0 ? this.props.activeOpacity : 0.5}
 				>
-					{children}
+					{this.props.children}
 				</TouchableOpacity>
 			);
 		} else {
+      const children = React.Children.map(
+        this.props.children,
+        child =>
+          child && child.type === Text
+            ? React.cloneElement(child, { uppercase: variables.btnUppercaseAndroidText, ...child.props })
+            : child
+      )
 			return (
 				<TouchableNativeFeedback
 					ref={c => (this._root = c)}
