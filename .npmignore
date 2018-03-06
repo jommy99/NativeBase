@@ -1,5 +1,6 @@
 # Source file
-Components
+# TODO why was this here it makes install ignore dist/theme/components
+# Components
 
 # Dotfiles
 .babelrc
