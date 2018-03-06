@@ -6,12 +6,14 @@ declare module "native-base" {
 		interface Text extends ReactNative.TextProperties {
 			note?: boolean;
 			uppercase?: boolean;
+      styleNames?: string;
 		}
 
 		interface Switch extends ReactNative.SwitchProperties {}
 
 		interface View extends ReactNative.ViewProperties {
 			padder?: boolean;
+      styleNames?: string;
 		}
 
 		interface Picker extends ReactNative.PickerProperties {
@@ -19,6 +21,7 @@ declare module "native-base" {
 			inlineLabel?: boolean;
 			headerBackButtonText?: string;
 			placeholder?: string;
+      styleNames?: string;
 		}
 
 		interface H1 extends ReactNative.TextProperties {}
@@ -39,6 +42,7 @@ declare module "native-base" {
 			danger?: boolean;
 			warning?: boolean;
 			info?: boolean;
+      styleNames?: string;
 		}
 
 		interface Badge extends ReactNative.ViewProperties, BsStyle {}
@@ -68,6 +72,7 @@ declare module "native-base" {
              * Takes a data entry from the data source and should return a renderable component to be rendered as the row.
              */
 			renderItem?: Function;
+      styleNames?: string;
 		}
 		/**
          * see Widget Header.js
@@ -90,18 +95,22 @@ declare module "native-base" {
 			noShadow?: boolean;
 			androidStatusBarColor?: string;
 			iosBarStyle?: ReactNative.StatusBarStyle;
+      styleNames?: string;
 		}
 
 		interface Left {
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 
 		interface Body {
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 
 		interface Right {
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 
 		/**
@@ -109,24 +118,28 @@ declare module "native-base" {
          */
 		interface FooterTab {
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 		/**
          * see Widget Footer.js
          */
 		interface Footer {
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 		/**
          * see Widget Title.js
          */
 		interface Title {
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 		/**
          * see Widget Subtitle/index.js
          */
 		interface SubTitle {
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 		/**
          * see Widget Container.js
@@ -137,6 +150,7 @@ declare module "native-base" {
              */
 			theme?: Object;
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 		/**
          * see Widget Content.js
@@ -153,6 +167,7 @@ declare module "native-base" {
 			scrollEnabled?: boolean;
 			style?: ReactNative.ViewStyle;
 			contentContainerStyle?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 		/**
          * see Widget Button.js
@@ -229,6 +244,7 @@ declare module "native-base" {
              * [android] colored ripple effect
              */
 			androidRippleColor?: string;
+      styleNames?: string;
 		}
 		/**
 
@@ -251,6 +267,7 @@ declare module "native-base" {
 				rowID: string | number,
 				highlightRow?: boolean
 			) => React.ReactElement<any>;
+      styleNames?: string;
 		}
 		/**
          * see Widget ListItem.js
@@ -288,10 +305,12 @@ declare module "native-base" {
              * [android] colored ripple effect
              */
 			androidRippleColor?: string;
+      styleNames?: string;
 		}
 
 		interface Separator {
 			bordered?: boolean;
+      styleNames?: string;
 		}
 
 		/**
@@ -302,6 +321,7 @@ declare module "native-base" {
 			footer?: boolean;
 			cardBody?: boolean;
 			button?: boolean;
+      styleNames?: string;
 		}
 		/**
          * Override React ListViewProperties
@@ -445,6 +465,7 @@ declare module "native-base" {
 			stickyHeaderIndices?: number[];
 
 			ref?: React.Ref<ReactNative.ListViewStatic & ReactNative.ScrollViewStatic & ReactNative.ViewStatic>;
+      styleNames?: string;
 		}
 		/**
          * see Widget Card.js
@@ -453,6 +474,7 @@ declare module "native-base" {
 			dataArray?: Array<any>;
 			style?: ReactNative.ViewStyle;
 			ref?: React.Ref<ReactNative.ViewProperties | ReactListViewProperties>;
+      styleNames?: string;
 		}
 		/**
          * react-native-easy-grid
@@ -460,9 +482,11 @@ declare module "native-base" {
 		interface Grid extends ReactNative.ViewProperties {}
 		interface Row extends ReactNative.ViewProperties {
 			size?: number;
+      styleNames?: string;
 		}
 		interface Col extends ReactNative.ViewProperties {
 			size?: number;
+      styleNames?: string;
 		}
 		/**
          * see Widget InputGroup.js
@@ -495,6 +519,7 @@ declare module "native-base" {
 			regular?: boolean;
 			underline?: boolean;
 			rounded?: boolean;
+      styleNames?: string;
 		}
 		/**
          * see Widget Input.js
@@ -516,16 +541,19 @@ declare module "native-base" {
              * Disables inputting data.
              */
 			disabled?: boolean;
+      styleNames?: string;
 		}
 		/**
          * see Widget Textarea.js
          */
 		interface Textarea extends ReactNative.TextInputProperties {
 			rowSpan: number;
+      styleNames?: string;
 		}
 
 		interface Label {
 			style?: ReactNative.TextStyle;
+      styleNames?: string;
 		}
 		/**
          * see Widget Icon.js
@@ -540,6 +568,9 @@ declare module "native-base" {
 			android?: string;
 			color?: string;
 			fontSize?: number;
+      styleNames?: string;
+
+      size?: number;
 		}
 		/**
          * see Widget Icon.js
@@ -560,12 +591,14 @@ declare module "native-base" {
              * By default thumbnail is circle in shape.
              */
 			square?: boolean;
+      styleNames?: string;
 		}
 		/**
          * see Widget Spinner.js
          */
 		interface Spinner extends ReactNative.ActivityIndicatorProperties {
 			inverse?: boolean;
+      styleNames?: string;
 		}
 		/**
          * see Widget CheckBox.js
@@ -574,12 +607,14 @@ declare module "native-base" {
 			checked?: boolean;
 			color?: string;
 			onPress?: Function;
+      styleNames?: string;
 		}
 		/**
          * see Widget CheckBox.js
          */
 		interface Radio extends ReactNative.TouchableOpacityProperties {
 			selected?: boolean;
+      styleNames?: string;
 		}
 		/**
          * see Widget ProgressBar.js
@@ -588,6 +623,7 @@ declare module "native-base" {
 			progress?: number;
 			color?: string;
 			inverse?: boolean;
+      styleNames?: string;
 		}
 		/**
          * vendor react-native-drawer
@@ -597,6 +633,7 @@ declare module "native-base" {
 			main?: ReactNative.ViewStyle;
 			drawerOverlay?: ReactNative.ViewStyle;
 			mainOverlay?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 		interface Drawer {
 			acceptDoubleTap?: boolean;
@@ -628,6 +665,7 @@ declare module "native-base" {
 			tweenEasing?: string;
 			tweenHandler?: Function;
 			type?: "overlay" | "static" | "displace";
+      styleNames?: string;
 		}
 		/**
          * see Widget Tabs.js
@@ -640,15 +678,18 @@ declare module "native-base" {
 			onChangeTab?: Function;
 			locked?: boolean;
 			initialPage?: number;
+      styleNames?: string;
 		}
 
 		interface Tab {
 			heading: _TabHeading;
+      styleNames?: string;
 		}
 		interface TabHeading {
 			activeTabStyle?: ReactNative.ViewStyle;
 			textStyle?: ReactNative.TextStyle;
 			activeTextStyle?: ReactNative.TextStyle;
+      styleNames?: string;
 		}
 
 		interface Item {
@@ -668,10 +709,12 @@ declare module "native-base" {
 			success?: boolean;
 			last?: boolean;
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 
 		interface Form {
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 
 		interface Fab {
@@ -681,6 +724,7 @@ declare module "native-base" {
 			onPress?: () => void;
 			position?: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
 			style?: ReactNative.ViewStyle;
+      styleNames?: string;
 		}
 
 		interface Image extends ReactNative.TextProperties {}
@@ -973,4 +1017,15 @@ declare module "native-base" {
 			textStyle?: object;
 		}): void;
 	}
+
+  export function connectStyle(
+    componentStyleName: string,
+    componentStyle: any,
+    mapPropsToStyleNames?: Function,
+    options?: any
+  ): <P, T extends React.ComponentType>(wrapped: T<P>) => T<P>;
+
+  export const getTheme: Function;
+  export const variables: any;
 }
+
