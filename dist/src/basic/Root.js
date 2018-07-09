@@ -15,21 +15,23 @@ this.props.children,
 _react2.default.createElement(_ToastContainer.ToastContainer,{
 ref:function ref(c){
 if(!_ToastContainer.ToastContainer.toastInstance)_ToastContainer.ToastContainer.toastInstance=c;
-},__source:{fileName:_jsxFileName,lineNumber:15}}),
+},__source:{fileName:_jsxFileName,lineNumber:15}})));
 
-_react2.default.createElement(_Actionsheet.ActionSheetContainer,{
-ref:function ref(c){
-if(!_Actionsheet.ActionSheetContainer.actionsheetInstance)
-_Actionsheet.ActionSheetContainer.actionsheetInstance=c;
-},__source:{fileName:_jsxFileName,lineNumber:20}})));
+
+
+
+
+
+
+
 
 
 
 }}]);return Root;}(_react.Component);
 
 
-Root.propTypes=_extends({},_reactNative.ViewPropTypes,{
-
+Root.propTypes=_extends({},
+_reactNative.ViewPropTypes,{
 style:_propTypes2.default.oneOfType([
 _propTypes2.default.object,
 _propTypes2.default.number,

@@ -75,8 +75,8 @@ headerContent)));
 
 render:function render(){var _this=this;
 var variables=this.context.theme?
-this.context.theme["@@shoutem.theme/themeStyle"].variables:_platform2.default;
-
+this.context.theme["@@shoutem.theme/themeStyle"].variables:
+_platform2.default;
 var platformStyle=variables.platformStyle;
 var containerWidth=this.props.containerWidth;
 var numberOfTabs=this.props.tabs.length;

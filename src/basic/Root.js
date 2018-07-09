@@ -17,12 +17,14 @@ class Root extends Component {
             if (!Toast.toastInstance) Toast.toastInstance = c;
           }}
         />
+        {/*
         <ActionSheet
           ref={c => {
             if (!ActionSheet.actionsheetInstance)
               ActionSheet.actionsheetInstance = c;
           }}
         />
+        */}
       </View>
     );
   }
