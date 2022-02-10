@@ -65,7 +65,6 @@
     "react-native-vector-icons": "~4.4.2",
     "react-test-renderer": "^15.3.2"
   },
-  "gitHead": "5bbeacc403ba97622703699132c55d8359344004",
   "homepage": "https://github.com/GeekyAnts/NativeBase#readme",
   "main": "dist/src/index.js",
   "typings": "./index.d.ts",
